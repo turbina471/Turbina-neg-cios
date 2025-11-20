@@ -11,11 +11,9 @@
     .glow { text-shadow: 0 0 30px #00ff6a; }
     .pulse { animation: pulse 2s infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-    .float-btn {
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
-    }
+    .float-btn { transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6); }
     .float-btn:hover { transform: scale(1.12); }
+    .check { @apply text-[#00ff6a] text-3xl font-bold; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -26,40 +24,74 @@
     WhatsApp
   </a>
 
-  <!-- Hero + Vídeo + Escassez -->
+  <!-- Hero + Vídeo + Escassez + Botão -->
   <section class="flex-1 flex flex-col items-center justify-center text-center px-6 py-10 bg-gradient-to-b from-black to-[#0a0a0a]">
-
-    <!-- Título -->
     <h1 class="text-5xl md:text-7xl font-black mb-8 glow text-[#00ff6a] leading-tight">
       Automatize seu atendimento no WhatsApp<br>e venda 24h no piloto automático
     </h1>
-
-    <!-- Subtítulo -->
     <p class="text-xl md:text-3xl mb-10 text-gray-300 max-w-4xl">
-      Respostas 24h • Recuperação de carrinho • Agendamento • Cobrança Pix automática<br>
-      Tudo funcionando enquanto você dorme
+      Respostas 24h • Recuperação de carrinho • Agendamento • Cobrança Pix automática
     </p>
 
-    <!-- Vídeo (agora vem antes da escassez) -->
+    <!-- Vídeo -->
     <div class="w-full max-w-5xl mx-auto mb-12">
       <iframe class="w-full aspect-video rounded-2xl shadow-2xl border-4 border-[#00ff6a]/30"
               src="https://www.youtube.com/embed/fxby-3oz-qY?autoplay=1&rel=0&modestbranding=1"
               title="Vídeo de apresentação"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-      </iframe>
+              allowfullscreen></iframe>
     </div>
 
-    <!-- Escassez gigante -->
+    <!-- Escassez -->
     <div class="text-4xl md:text-6xl font-black text-red-500 mb-10 pulse glow">
       APENAS 2 VAGAS RESTANTES ESTA SEMANA
     </div>
 
     <!-- Botão CTA -->
     <a href="https://wa.me/5562991117329" target="_blank"
-       class="bg-[#25D366] hover:bg-[#20b357] text-white text-2xl md:text-4xl font-bold px-16 py-8 rounded-full shadow-2xl hover:scale-110 transition-all duration-300">
+       class="bg-[#25D366] hover:bg-[#20b357] text-white text-2xl md:text-4xl font-bold px-16 py-8 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 mb-20">
       QUERO UMA DAS 2 VAGAS AGORA
     </a>
+  </section>
+
+  <!-- 5 MOTIVOS - Depois do botão final -->
+  <section class="py-20 px-6 bg-black">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-black mb-16 glow text-[#00ff6a]">
+        Por que restaurantes estão trocando iFood/Rappi por automação no WhatsApp?
+      </h2>
+
+      <div class="grid md:grid-cols-1 gap-10 text-left max-w-3xl mx-auto text-xl md:text-2xl">
+        <div class="flex items-start gap-4">
+          <span class="check">✓</span>
+          <p><strong>Zero taxa por pedido</strong> – Você fica com 100% do lucro (iFood fica com até 30%)</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="check">✓</span>
+          <p><strong>Cliente pede direto no seu WhatsApp</strong> – Não precisa mais do app do iFood</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="check">✓</span>
+          <p><strong>Robô responde 24h</strong> – Mesmo de madrugada ou domingo o cliente é atendido na hora</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="check">✓</span>
+          <p><strong>Recupera carrinho abandonado</strong> – Cliente que começou o pedido e sumiu recebe lembrete automático</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="check">✓</span>
+          <p><strong>Pagamento por Pix na hora</strong> – Dinheiro cai direto na sua conta, sem espera de 30 dias</p>
+        </div>
+      </div>
+
+      <!-- Botão final extra (opcional) -->
+      <div class="mt-16">
+        <a href="https://wa.me/5562991117329" target="_blank"
+           class="inline-block bg-[#25D366] hover:bg-[#20b357] text-white text-2xl md:text-3xl font-bold px-16 py-8 rounded-full shadow-2xl hover:scale-110 transition-all">
+          QUERO PARAR DE PAGAR TAXA AGORA
+        </a>
+      </div>
+    </div>
   </section>
 
 </body>
